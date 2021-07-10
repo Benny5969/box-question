@@ -1,0 +1,87 @@
+body{
+    text-decoration: none;
+}
+.m{
+    width:100%;                                             /*background box covers whole screen in width*/
+    background-color: rgb(46, 48, 45);
+    height: 1200px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+
+.l1{
+    width:35%;                                              /*35% width*/
+    height: 100px;
+    float: left;                                            /*making it stick to one end*/
+    background-color: rgb(240, 214, 128);                 /*giving bg color*/
+    text-align: center;
+    margin-top: 70px;
+    margin-left: 10%;                                       /*10% margin*/
+    border: rgb(0, 0, 0);
+    border-width: 9px;
+    border-radius: 5px;
+    opacity: 0.5;                                           /*box having an opacity of 0.5 for the whole box*/
+    padding: auto;
+}
+.pad1{
+    height: 0px;
+    padding-bottom: 35px;                                   /*vertically aligning text*/
+    padding-top: 35px;
+}
+.l2{
+    width:35%;                                              /*35% width*/     
+    height: 100px;
+    float: left;
+    background-color: rgb(128, 214, 240, 0.5);              /*opacity of 0.5 only for the background(4th value in bracket ensures this)*/
+    text-align: center;
+    margin-top: 70px;
+    margin-left: 10%;                                       /*10% margin, all these lead to 10% gap in between*/
+    border: rgb(0, 0, 0);
+    border-width: 9px;
+    border-radius: 5px;
+    padding: auto;
+}
+
+
+
+.pad2{                                                      /*vertically aligning text*/
+    height: 0px;
+    padding-bottom: 10px;
+    padding-top: 25px;
+}
+
+@media only screen and (max-width:800px){                       /*changing text size for screens less than 800px width*/
+    .m{
+        font-size: 17PX;
+    }
+    .pad1{
+        padding-top:38px;
+    }
+    .pad2{
+        padding-top:27px;
+    }
+
+}
+
+@media only screen and (max-width:600px){                        /*changing text size for screens less than 600px width*/
+    .m{
+        display:grid;                       
+        grid-template-rows: 1fr 1fr;
+        height:300px;
+        padding-bottom: 600px;
+        font-size: 15PX;
+    }
+    .l1,.l2{
+        width:50%;
+        margin-left: 25%;
+    }
+    .l2{
+        margin-top: -30px;                              /*Making sure these boxes stack on top of each other on small screens*/
+    }
+}
+
+
+@media only screen and (max-width:300px){               /*changing text size for screens less than 300px width*/
+    .m{
+        font-size: 12PX;
+    }
